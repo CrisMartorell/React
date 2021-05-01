@@ -10,11 +10,7 @@ const Result = ({value}) => {
 }
 
 Result.propTypes = {
-    value: PropTypes.string.isRequired
-}
-
-Result.defaultProps = {
-    value: "0"
+    value: PropTypes.string
 }
 
 export default Result;
