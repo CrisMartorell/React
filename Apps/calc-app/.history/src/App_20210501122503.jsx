@@ -3,9 +3,9 @@ import ReactDOM from 'react-dom';
 import './App.css';
 
 const App = () => {
-    return (<main className="react-calculator">
+    return (<div>
         Calc App
-    </main>);
+    </div>);
 };
 
 export default App;
