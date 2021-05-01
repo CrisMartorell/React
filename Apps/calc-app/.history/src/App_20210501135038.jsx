@@ -1,15 +1,13 @@
 import React from 'react';
-import Button from './components/Button';
-
-import Result from './components/Result';
 import './App.css';
-
+import Result from './components/Result';
+import Button from './components/Button';
 
 const App = () => {
     return (<main className="react-calculator">
         <Result />
         <div className="numbers">
-            <Button test="1" clickHandler={(text)}/>
+            <button>1</button>
             <button>2</button>
             <button>3</button>
             <button>4</button>
