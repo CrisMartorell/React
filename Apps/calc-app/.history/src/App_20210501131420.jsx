@@ -5,7 +5,7 @@ import Result from './components/Result';
 
 const App = () => {
     return (<main className="react-calculator">
-        <Result value={"0"}/>
+        <Result value = "hola"/>
         <div className="numbers">
             <button>1</button>
             <button>2</button>
