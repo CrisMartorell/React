@@ -19,19 +19,28 @@ const App = () => {
             />
 
             <Functions 
-                onContentClear={() =>
-                    console.log("Content Clear")}
-                onDelete={() =>
-                    console.log("onDelete")}
+                onContentClear={() => {
+                    console.log("Content Clear")
+                    setStack('')
+                }}
+                onDelete={() => {
+                    if (stack.length > 0){
+                        console.log("onDelete")
+                        const newStack = stack.substring(0, stack.length -1)
+                        setStack(newStack)
+                    }
+                }}
             />
 
             <MathOperations 
-                onClickOperation={operation => 
+                onClickOperation={operation => {
                     console.log("Operation: ", operation)
-                }
-                onClickEqual={equal =>
+                    setStack(`${stack}${operation}`)
+                }}
+                onClickEqual={equal =>{
                     console.log("Equal: ", equal)
-                }
+                    setStack(eval(stack).toString())
+                }}
             />
         </main>
     );
