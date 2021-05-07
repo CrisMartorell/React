@@ -1,4 +1,6 @@
+/* eslint no-eval: 0 */
 import React, {useState} from 'react';
+import words from 'lodash.words'
 import Functions from './components/Functions';
 import MathOperations from './components/MathOperations';
 import Numbers from './components/Numbers';
@@ -8,10 +10,14 @@ import './App.css';
 
 const App = () => {
     const [stack, setStack] = useState("");
+
+    const items = words(stack, /[^-^+^*^/]+/g)
+
+    const value = items.length > 0 ? items[items.length-1] : "0";
     
     return (
         <main className="react-calculator">
-            <Result value= {stack}/>
+            <Result value= {value}/>
             <Numbers onClickNumber={number =>{
                 console.log("Click en number ", number)
                 setStack(`${stack}${number}`)
