@@ -6,7 +6,7 @@ import '@testing-library/jest-dom'
 test("Weather render", async () => {
     //AAA
     // Arrange
-    const {findByRole} = render(<Weather temperature={10} />)
+    const {findByRole} = render(<Weather temperature={10} state="sunny"/>)
 
     // Act
     const temp = await findByRole("heading")
