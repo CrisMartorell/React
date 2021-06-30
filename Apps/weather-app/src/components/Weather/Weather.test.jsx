@@ -1,6 +1,6 @@
 import React from 'react'
 import Weather from './Weather'
-import { render } from '@testing-library/react'
+import { fireEvent, render } from '@testing-library/react'
 import '@testing-library/jest-dom'
 
 test("Weather render", async () => {
@@ -14,3 +14,4 @@ test("Weather render", async () => {
     // Assert
     expect(temp).toHaveTextContent("10")
 })
+
