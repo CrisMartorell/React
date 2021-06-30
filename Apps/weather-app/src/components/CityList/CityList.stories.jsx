@@ -9,7 +9,7 @@ export default {
 const cities = [
     {city: "Berlín", country:"Alemania"},
     {city: "Lyon", country:"Francia"},
-    {city: "Manchester", country:"Reino Unido"},
+    {city: "Quito", country:"Ecuador"},
     {city: "Venecia", country:"Italia"},
     {city: "Málaga", country:"España"}
 ]
