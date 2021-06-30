@@ -1,11 +1,17 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import CityInfor from './../CityInfo/CityInfo'
+import CityInfo from './../CityInfo/CityInfo'
+import Weather from './../Weather/Weather'
 
 const renderCityAndContry = cityAndCountry => {
     const { city, country} = cityAndCountry
 
-    return <CityInfo city= {city} country = {{country}}/>
+    return (
+        <li>
+            <CityInfo city= {city} country = {country}/>
+            <Weather temperature={10}/>
+        </li>
+        )
 }
 
 const CityList = ({cities}) => {
@@ -19,7 +25,7 @@ const CityList = ({cities}) => {
 }
 
 CityList.propTypes = {
-    cities: PropTypes.array.isRequired
+    cities: PropTypes.array.isRequired  
 }
 
 export default CityList
