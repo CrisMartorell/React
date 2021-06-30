@@ -1,15 +1,15 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import CityInfo from './../CityInfo/CityInfo'
-import Weather from './../Weather/Weather'
+import CityInfo from './../CityInfo'
+import Weather from './../Weather'
 
 const renderCityAndContry = cityAndCountry => {
     const { city, country} = cityAndCountry
 
     return (
-        <li>
+        <li key={city}>
             <CityInfo city= {city} country = {country}/>
-            <Weather temperature={10}/>
+            <Weather temperature={10} state="sunny"/>
         </li>
         )
 }
