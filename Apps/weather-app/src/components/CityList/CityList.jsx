@@ -4,7 +4,7 @@ import Grid from '@material-ui/core/Grid'
 import CityInfo from './../CityInfo'
 import Weather from './../Weather'
 
-//renderCityAndCountry se convertirá en una función que devuelve otra funcións
+//renderCityAndCountry se convertirá en una función que devuelve otra función  (closure)
 const renderCityAndContry = eventOnClickCity => cityAndCountry => {
     const { city, country} = cityAndCountry
 
